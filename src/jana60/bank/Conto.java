@@ -5,24 +5,24 @@ import java.util.Random;
 public class Conto {
 
 	private String accountNumber;
-	private String prorietaryName;
+	private String Name;
 	private int balance;
 	
-	public Conto(String proprietaryName) {
+	public Conto(String Name) {
 		
 		Random rnd = new Random();
 		
 		accountNumber = "" + rnd.nextInt(1, 1001); 
-		setProrietaryName(proprietaryName);
+		setName(Name);
 		balance = 0;
 	}
 
-	public String getProrietaryName() {
-		return prorietaryName;
+	public String getName() {
+		return Name;
 	}
 
-	public void setProrietaryName(String prorietaryName) {
-		this.prorietaryName = prorietaryName;
+	public void setName(String Name) {
+		this.Name = Name;
 	}
 
 	public String getAccountNumber() {
@@ -61,7 +61,7 @@ public class Conto {
 	public String toString() {
 		
 		return "[" + getAccountNumber() + "] - " 
-				+ getProrietaryName() 
+				+ getName() 
 				+ "\nbalance: " + getFormBalance();
 	}
 }

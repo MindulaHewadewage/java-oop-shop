@@ -8,7 +8,7 @@ public class main {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("Qual e il suo nome:");
+		System.out.println("Nome:");
 		String name = sc.nextLine();
 		
 		Conto conto = new Conto(name);
@@ -41,11 +41,11 @@ public class main {
 					System.out.println("Quanto vuoi prelevare?");
 					int amount = sc.nextInt();
 					boolean res = conto.getMoney(amount);
-					System.out.println(res ? "Ok" : "Non ne hai abbastanza");
+					System.out.println(res ? "Ok" : "Non hai soldi");
 				}
 				break;
 				case 3:
-					System.out.println("Good bye");
+					System.out.println("Arrivederci");
 					return;
 			}
 		}
